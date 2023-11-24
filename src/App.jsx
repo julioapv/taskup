@@ -1,13 +1,21 @@
+import { Reac } from 'react'
 import { useState } from 'react'
+import { Header } from './components/Header'
+import { TodoCounter } from './components/TodoCounter'
+import { TodoSearch } from './components/TodoSearch'
+import { TodoList } from './components/TodoList'
+import { TodoItem } from './components/TodoItems'
+import { Footer } from './components/Footer'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className='text-5xl text-green-500'>Hello, this is taskup!</h1>
-    </>
+    <div className='flex items-center justifi-between flex-col text-center bg-blue-200 w-full h-full'>
+      <Header />
+      <TodoList />
+      <Footer />
+    </div>
   )
 }
 
